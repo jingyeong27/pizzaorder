@@ -21,4 +21,12 @@ for requested_crust in requested_crusts:
                            
     else:
         print("Sorry,the crust you want to add is out of stock! Could you please choose another crust?")
-print('Thank you!!!') 
+        
+order_way = input("Do you want packaging or delivery? ===> ")
+if order_way == "packaging" :
+    print("We offer a two-dollar discount for packaging.")
+    print(f"==== ${bill-2} " + "Thank you. You can pick it up later")
+else:
+    del_adr = input("okay, Please enter your address ===>")
+    print("Yes, then I will deliver " + del_adr + " to this address.")
+    print("Thank you so much, I'll deliver it to you soon")
