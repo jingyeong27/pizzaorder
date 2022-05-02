@@ -1,12 +1,39 @@
-#another combine code
+# another combine code
 pizza = {
-'crust': ['thick','thin'],
-'toppings': ['mushrooms','olives','green peppers','pepperoni','pineapple','extra cheese'],
+    'crust': ['thick', 'thin'],
+    'toppings': ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese'],
+    'size' : ['S', 'M', 'L']
 }
-pizza_crust = input("what kind of crust do you want to have ===> ")
-requested_crusts = []
-requested_crusts.append(pizza_crust)
-#print(requested_crusts)
+print("==== Welcome to Python Pizza shop! ====")
+
+pizza_size = input("What size pizza do you want? [S, M, L]  ===> ")
+requested_size= []
+requested_size.append(pizza_size)
+# print(requested_crusts)
+bill = 0
+for requested_size in requested_size:
+    if pizza_size == "S":
+        bill += 15
+    elif pizza_size == "M":
+        bill += 20
+    elif pizza_size == "L":
+        bill += 25
+    else:
+        pizza_size = input("You can choose the size from S, M, and L. Please enter it again !! ===> " )
+        requested_size = []
+        requested_size.append(pizza_size)
+        if pizza_size == "S":
+            bill += 15
+        elif pizza_size == "M":
+            bill += 20
+        elif pizza_size == "L":
+            bill += 25
+
+for requested_size in requested_size:
+    if requested_size in pizza['size']:
+        pizza_crust = input("what kind of crust do you want to have [thick, thin]  ===> ")
+        requested_crusts = []
+        requested_crusts.append(pizza_crust)
 for requested_crust in requested_crusts:
     if requested_crust in pizza['crust']:
         toppings = input("what topping do you want to add ===> ")
